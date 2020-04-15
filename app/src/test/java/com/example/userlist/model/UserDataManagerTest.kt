@@ -61,4 +61,10 @@ class UserDataManagerTest {
         userDataManager.insertUser(userOne)
         Assert.assertTrue(userDataManager.insertUser(userTwo))
     }
+
+    @After
+    fun tearDown()
+    {
+        userDataManager.deleteUsers()
+    }
 }
