@@ -43,15 +43,14 @@ class UserDataManagerTest {
         Assert.assertFalse(userDataManager.insertUser(userTwo))
     }
 
-    // test for users with different email
-   /* @Test
+    //test for users with different email
+   @Test
     fun ShouldBeAbleToInsertUsersWithDifferentEmail() {
         val userDataManager: UserDataManager = UserDataManagerImpl()
         val userOne = User("Pavan", mobileNumber = "9543216423", email = "pavan123@gmail.com")
         val userTwo = User("Ravi", mobileNumber = "9645432532", email = "ravi432@gmail.com")
         val userListSizeBeforeAdd = userDataManager.readUsers().size
         userDataManager.insertUser(userOne)
-        Assert.assertTrue(userDataManager.insertUser(userOne))
-        Assert.assertFalse(userDataManager.insertUser(userTwo))
-    }*/
+        Assert.assertTrue(userDataManager.insertUser(userTwo))
+    }
 }
