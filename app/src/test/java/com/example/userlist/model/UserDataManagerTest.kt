@@ -5,9 +5,17 @@ import com.example.model.UserDataManager
 import com.example.model.UserDataManagerImpl
 import org.junit.After
 import org.junit.Assert
+import org.junit.Before
 import org.junit.Test
 
 class UserDataManagerTest {
+
+    lateinit var userDataManager : UserDataManager
+
+    @Before
+    fun setUp() {
+        userDataManager = UserDataManagerImpl()
+    }
 
     // test for insert one user
     @Test
