@@ -52,7 +52,7 @@ class UserDataManagerTest {
     }
 
     //test for users with different email
-   /*@Test
+   @Test
     fun ShouldBeAbleToInsertUsersWithDifferentEmail() {
         val userDataManager: UserDataManager = UserDataManagerImpl()
         val userOne = User("Pavan", mobileNumber = "9543216423", email = "pavan123@gmail.com")
@@ -66,5 +66,5 @@ class UserDataManagerTest {
     fun tearDown()
     {
         userDataManager.deleteUsers()
-    }*/
+    }
 }
