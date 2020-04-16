@@ -10,6 +10,10 @@ class UserDataPresenterImpl : UserDataPresenter {
         return true
     }
 
+    override fun initDetailUI(user: User): Boolean {
+        return true
+    }
+
 
 }
 
