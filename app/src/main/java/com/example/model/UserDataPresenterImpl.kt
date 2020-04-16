@@ -14,6 +14,10 @@ class UserDataPresenterImpl : UserDataPresenter {
         return true
     }
 
+    override fun onDeleteButtonClick() {
+
+    }
+
 
 }
 

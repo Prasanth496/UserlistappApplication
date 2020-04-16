@@ -3,12 +3,20 @@ package com.example.userlist.model
 import com.example.model.User
 import com.example.model.UserDataPresenter
 import com.example.model.UserDataPresenterImpl
+import org.junit.After
 import org.junit.Assert
+import org.junit.Before
 import org.junit.Test
 
 class UserDataPresenterTest {
 
     lateinit var userDataPresenter: UserDataPresenter
+
+    @Before
+    fun setUp() {
+        userDataPresenter = UserDataPresenterImpl()
+    }
+
 
     // test for able to add user to UI
     @Test
@@ -67,5 +75,10 @@ class UserDataPresenterTest {
         val userTwo = User("Ravi", mobileNumber = "9645432532", email = "ravi234@gmail.com")
         Assert.assertTrue(userDataPresenter.initDetailUI(userOne))
         Assert.assertTrue(userDataPresenter.initDetailUI(userTwo))
+    }
+
+    @After
+    fun tearDown() {
+        userDataPresenter.onDeleteButtonClick()
     }
 }
