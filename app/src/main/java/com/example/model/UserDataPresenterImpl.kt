@@ -6,6 +6,10 @@ class UserDataPresenterImpl : UserDataPresenter {
          return true
     }
 
+    override fun saveUserToList(user: User): Boolean {
+        return true
+    }
+
 
 }
 
