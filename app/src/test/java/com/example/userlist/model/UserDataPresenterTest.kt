@@ -39,4 +39,15 @@ class UserDataPresenterTest {
         userDataPresenter.saveUserToList(user)
         Assert.assertTrue(userDataPresenter.saveUserToList(user))
     }
+
+    // test for should be able to add two users to list
+    @Test
+    fun ShouldBeAbleToAddTwoUsersToList() {
+        val userDataPresenter: UserDataPresenter = UserDataPresenterImpl()
+        val userOne = User("Pavan", mobileNumber = "9543216423", email = "pavan123@gmail.com")
+        val userTwo = User("Ravi", mobileNumber = "9645432532", email = "ravi234@gmail.com")
+        Assert.assertTrue(userDataPresenter.saveUserToList(userOne))
+        Assert.assertTrue(userDataPresenter.saveUserToList(userTwo))
+    }
+
 }
